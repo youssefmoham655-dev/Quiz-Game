@@ -1,0 +1,29 @@
+html{
+    margin:0;
+    padding:0;
+    background:#4361ee;
+}
+.navbar1{
+    height:100px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+.navbar{
+    border-radius:100px;
+    background-color:white;
+    width:1000px;
+}
+.nav-links{
+    list-style:none;
+    display:flex;
+    gap:200px;
+    padding:15px;
+    margin:0;
+    justify-content:center;
+    font-family:fantasy;
+}
+.nav-links a{
+    text-decoration:none;
+    color:black;
+}
