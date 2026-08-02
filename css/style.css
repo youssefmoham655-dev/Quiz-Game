@@ -6,16 +6,46 @@
         opacity: 1;
     }
 }
-body{
+:root{
+    --background-light:#4460EF;
+    --container-and-navbar-color-light:white;
+    --text-color-light:black;
+    --Take-color-light:lightgrey;
+    --nav-bar-text:#4460EF;
+}
+.darkmode{
+    --background-light:#303030;
+    --container-and-navbar-color-light:rgb(126, 125, 125);
+    --text-color-light:white;
+    --Take-color-light:#9c9c9c;
+    --nav-bar-text:#fffff;
+}
+#theme-switch{
+    height:40px;
+    width:40px;
+    padding:0;
+    border-radius:50%;
+    background-color:var(--container-and-navbar-color-light);
+    display:flex;
+    justify-content:center;
+    align-items:center; 
     margin:0;
 }
-#myVideo {
-    position: fixed;
-    right: 0;
-    bottom: 0;
-    min-width: 100%;
-    min-height: 100%;
-    z-index:-1;
+#theme-switch svg{
+    fill: var(--background-light)
+}
+#theme-switch svg:last-child{
+    display:none;
+}
+.darkmode #theme-switch svg:first-child{
+    display:none;
+}
+.darkmode #theme-switch svg:last-child{
+    display:block;
+}
+body{
+    margin:0;
+    background-color:var(--background-light);
 }
 html{
     margin:0;
@@ -23,7 +53,7 @@ html{
 }
 .navbar1{
     border-radius:100px;
-    background-color:azure;
+    background-color:var(--container-and-navbar-color-light);
     width:1000px;
     animation: fadeIn 1s ease-in-out;
     box-shadow: 0px 7px 10px rgba(0, 0, 0, 0.3);
@@ -42,14 +72,17 @@ html{
     margin:0;
     justify-content:space-around;
     font-family:cursive;
+    color:var(--text-color-light);
+    
 }
 .nav-links a{
     text-decoration:none;
-    color:black;
+    color:var(--text-color-light);
     display:flex;
     flex-direction: column;
     align-items: center;
     gap: 5px;
+    color:var(--nav-bar-text);
 }
 .hero-section{
     display:flex;
@@ -59,13 +92,14 @@ html{
     justify-content:center;
     font-family:cursive;
     animation: fadeIn 1s ease-in-out;
+    color:var(--text-color-light);
 }
 .hero-section-content{
     display:flex;
     flex-direction:column;
     align-items:center;
     justify-content:center;
-    background-color:azure;
+    background-color:var(--container-and-navbar-color-light);
     width:1200px;
     height:200px;
     border-radius:10px;
@@ -76,12 +110,13 @@ html{
     transform: translateY(-3px);
 }
 .Take{
-    background-color:lightgrey;
+    background-color:var(--Take-color-light);
     padding:4px;
     font-family:cursive;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
     border-radius:3px;
     transition: transform 0.3s ease, background-color 0.3s ease;
+    color:var(--text-color-light);
 }
 .Take:hover{
     background-color: #e74c3c;
@@ -96,6 +131,7 @@ html{
     font-family:cursive;
     animation: fadeIn 1s ease-in-out;
     margin-top:30px;
+    color:var(--text-color-light);
 }
 .actual-stats{
     display:flex;
@@ -118,6 +154,7 @@ html{
     align-items:center;
     animation: fadeIn 1s ease-in-out;
     font-family:cursive;
+    color:var(--text-color-light);
 }
 .how-it-works-section-head{
     display:flex;
@@ -130,9 +167,10 @@ html{
     justify-content:space-around;
     align-items:center;
     gap:20px;
+    color:var(--text-color-light);
 }
 .single-step{
-    background-color:white;
+    background-color:var(--container-and-navbar-color-light);
     width:150px;
     height:80px;
     display:flex;
@@ -141,7 +179,7 @@ html{
     border:2px solid #08c8f3;
     border-radius:5px;
     transition: transform 0.3s ease, background-color 0.3s ease;
-    background-color:azure;
+    background-color:var(--container-and-navbar-color-light);
 }
 .single-step:hover{
     transform: translateY(-3px);
@@ -154,6 +192,7 @@ html{
     display:flex;
     align-items:center;
     justify-content:center;
+    color:var(--text-color-light);
 }
 .text-info{
     display:flex;
@@ -170,16 +209,18 @@ html{
 #nw-fact{
     font-family:cursive;
     padding:8px;
-    background-color:#1351EC;
+    background-color:var(--container-and-navbar-color-light);
     border:none;
     border-radius:15px;
     width:100px;
     margin-bottom:200px;
+    color:var(--text-color-light);
 }
 .footer{
     height:300px;
     width:100%;
     font-family:cursive;
+    color:var(--text-color-light);
 }
 .line2{
     margin-top:35px;
@@ -211,10 +252,10 @@ html{
 }
 .cont2 ul a{
     text-decoration:none;
-    color:black;
+    color:var(--text-color-light);
 }
 .cont2 ul a:hover{
-    color:#1351EC;
+    color:#7192e7;
 }
 .copyrights{
     width:100%;
