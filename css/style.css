@@ -149,3 +149,29 @@ html{
 .arrow{
     width:50px;
 }
+.info1{
+    width:100%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+.text-info{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-direction:column;
+    font-family:cursive;
+}
+.nw-fact-div{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+#nw-fact{
+    font-family:cursive;
+    padding:8px;
+    background-color:#1351EC;
+    border:none;
+    border-radius:15px;
+    width:100px;
+}
