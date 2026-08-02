@@ -6,9 +6,17 @@
         opacity: 1;
     }
 }
+:root{
+    --background-light:#4460EF;
+    --container-and-navbar-color-light:white;
+    --text-color-light:black;
+    --Take-color-light:lightgrey;
+    --nav-bar-text:#4460EF;
+
+}
 body{
     margin:0;
-    background-color:#4460EF;
+    background-color:var(--background-light);
 }
 html{
     margin:0;
@@ -16,7 +24,7 @@ html{
 }
 .navbar1{
     border-radius:100px;
-    background-color:azure;
+    background-color:var(--container-and-navbar-color-light);
     width:1000px;
     animation: fadeIn 1s ease-in-out;
     box-shadow: 0px 7px 10px rgba(0, 0, 0, 0.3);
@@ -38,11 +46,12 @@ html{
 }
 .nav-links a{
     text-decoration:none;
-    color:black;
+    color:var(--text-color-light);
     display:flex;
     flex-direction: column;
     align-items: center;
     gap: 5px;
+    color:var(--nav-bar-text);
 }
 .hero-section{
     display:flex;
@@ -58,7 +67,7 @@ html{
     flex-direction:column;
     align-items:center;
     justify-content:center;
-    background-color:azure;
+    background-color:var(--container-and-navbar-color-light);
     width:1200px;
     height:200px;
     border-radius:10px;
@@ -69,7 +78,7 @@ html{
     transform: translateY(-3px);
 }
 .Take{
-    background-color:lightgrey;
+    background-color:var(--Take-color-light);
     padding:4px;
     font-family:cursive;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
@@ -125,7 +134,7 @@ html{
     gap:20px;
 }
 .single-step{
-    background-color:white;
+    background-color:var(--container-and-navbar-color-light);
     width:150px;
     height:80px;
     display:flex;
@@ -134,7 +143,7 @@ html{
     border:2px solid #08c8f3;
     border-radius:5px;
     transition: transform 0.3s ease, background-color 0.3s ease;
-    background-color:azure;
+    background-color:var(--container-and-navbar-color-light);
 }
 .single-step:hover{
     transform: translateY(-3px);
@@ -163,7 +172,7 @@ html{
 #nw-fact{
     font-family:cursive;
     padding:8px;
-    background-color:#ffffff;
+    background-color:var(--container-and-navbar-color-light);
     border:none;
     border-radius:15px;
     width:100px;
@@ -204,7 +213,7 @@ html{
 }
 .cont2 ul a{
     text-decoration:none;
-    color:black;
+    color:var(--text-color-light);
 }
 .cont2 ul a:hover{
     color:#7192e7;
