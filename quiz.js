@@ -17,14 +17,13 @@ const categoryGrid = document.getElementById("category-grid");
 const categoryScreen = document.getElementById("category-screen");
 const difficultyScreen = document.getElementById("difficulty-screen");
 const quizScreen = document.getElementById("quiz-screen");
-
 const categoryName = document.getElementById("category-name");
 const progress = document.getElementById("quiz-progress");
 const difficultyTag = document.getElementById("quiz-difficulty-tag");
-
 const questionText = document.getElementById("question-text");
 const optionsList = document.getElementById("options-list");
 const nextBtn = document.getElementById("next-btn");
+
 let category = "";
 let difficulty = "";
 let questions = [];
@@ -32,7 +31,6 @@ let current = 0;
 
 // Show Categories 
 categories.forEach(cat => {
-
     const card = document.createElement("div");
     card.className = "category-card";
     card.innerHTML = `<h3>${cat.name}</h3>`;
@@ -47,17 +45,13 @@ categories.forEach(cat => {
 
 //Back
 document.getElementById("back-btn").onclick = function () {
-
     difficultyScreen.classList.add("hidden");
     categoryScreen.classList.remove("hidden");
 };
 
 //Difficulty 
-
 document.querySelectorAll(".difficulty-btn").forEach(button => {
-
     button.onclick = function () {
-
         difficulty = this.dataset.difficulty;
         getQuestions();
     };
@@ -65,7 +59,6 @@ document.querySelectorAll(".difficulty-btn").forEach(button => {
 
 // API
 async function getQuestions() {
-
     try {
         const response = await fetch(
             `https://opentdb.com/api.php?amount=10&category=${category}&difficulty=${difficulty}&type=multiple`
@@ -82,9 +75,9 @@ async function getQuestions() {
         console.log(error);
     }
 }
+
 //  Show Question 
 function showQuestion() {
-
     const q = questions[current];
     progress.textContent = `Question ${current + 1} / ${questions.length}`;
     difficultyTag.textContent = difficulty;
