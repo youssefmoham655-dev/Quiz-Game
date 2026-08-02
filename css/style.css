@@ -8,14 +8,7 @@
 }
 body{
     margin:0;
-}
-#myVideo {
-    position: fixed;
-    right: 0;
-    bottom: 0;
-    min-width: 100%;
-    min-height: 100%;
-    z-index:-1;
+    background-color:#4460EF;
 }
 html{
     margin:0;
@@ -170,7 +163,7 @@ html{
 #nw-fact{
     font-family:cursive;
     padding:8px;
-    background-color:#1351EC;
+    background-color:#ffffff;
     border:none;
     border-radius:15px;
     width:100px;
@@ -214,7 +207,7 @@ html{
     color:black;
 }
 .cont2 ul a:hover{
-    color:#1351EC;
+    color:#7192e7;
 }
 .copyrights{
     width:100%;
