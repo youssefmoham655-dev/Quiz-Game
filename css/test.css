@@ -2,13 +2,53 @@
 html{
     margin:0;
     padding:0;
-    background:#4361ee;
 }
-.navbar1{
+body{
+    margin:0;
+    background-color:var(--background-light);
+}
+:root{
+    --background-light:#4460EF;
+    --container-and-navbar-color-light:white;
+    --text-color-light:black;
+    --Take-color-light:lightgrey;
+    --nav-bar-text:#4460EF;
+}
+.darkmode{
+    --background-light:#303030;
+    --container-and-navbar-color-light:rgb(126, 125, 125);
+    --text-color-light:white;
+    --Take-color-light:#9c9c9c;
+    --nav-bar-text:#fffff;
+}
+#theme-switch{
+    height:40px;
+    width:40px;
+    padding:0;
+    border-radius:50%;
+    background-color:var(--container-and-navbar-color-light);
+    display:flex;
+    justify-content:center;
+    align-items:center; 
+    margin:0;
+}
+#theme-switch svg{
+    fill: var(--background-light)
+}
+#theme-switch svg:last-child{
+    display:none;
+}
+.darkmode #theme-switch svg:first-child{
+    display:none;
+}
+.darkmode #theme-switch svg:last-child{
+    display:block;
+}.navbar1{
     border-radius:100px;
-    background-color:white;
+    background-color:var(--container-and-navbar-color-light);
     width:1000px;
     animation: fadeIn 1s ease-in-out;
+    box-shadow: 0px 7px 10px rgba(0, 0, 0, 0.3);
 }
 .navbar{
     height:100px;
@@ -22,12 +62,18 @@ html{
     gap:200px;
     padding:15px;
     margin:0;
-    justify-content:center;
+    justify-content:space-around;
     font-family:cursive;
+    color:var(--text-color-light);
 }
 .nav-links a{
     text-decoration:none;
-    color:black;
+    color:var(--text-color-light);
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    color:var(--nav-bar-text);
 }
 .hero-section{
     display:flex;
@@ -67,7 +113,7 @@ html{
     transform: scale(1.1); 
     cursor: pointer;
 }
- /*Test Page*/
+/*Test Page*/
 .test-page{
     display:flex;
     flex-direction:column;
@@ -84,11 +130,13 @@ html{
     display:none;
 }
 
-/*  Heading  */
+/*  heading section */
 .test-heading{
     color:white;
     text-align:center;
     margin-bottom:30px;
+    font-family:cursive;
+    color:var(--text-color-light);
 }
 
 /* Categories */
