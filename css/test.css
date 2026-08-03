@@ -13,6 +13,7 @@ body{
     --text-color-light:black;
     --Take-color-light:lightgrey;
     --nav-bar-text:#4460EF;
+    --categoruy-color:white;
 }
 .darkmode{
     --background-light:#303030;
@@ -20,6 +21,7 @@ body{
     --text-color-light:white;
     --Take-color-light:#9c9c9c;
     --nav-bar-text:#fffff;
+    --categoruy-color:rgb(43, 42, 42);
 }
 #theme-switch{
     height:40px;
@@ -148,12 +150,14 @@ body{
     gap:20px;
 }
 .category-card{
-    background:white;
+    background:var(--categoruy-color);
+    color:var(--text-color-light);
     border-radius:10px;
     padding:50px 20px;
     text-align:center;
     box-shadow:0 5px 10px rgba(0,0,0,.3);
     transition:.3s;
+    font-family:cursive;
 }
 .category-card:hover{
     transform:translateY(-5px);
