@@ -126,19 +126,36 @@ for (let i = 0; i < answers.length; i++) {
     button.className = "option-btn";
     button.innerHTML = answers[i];
 
+    if (answers[i] === question.correct_answer) {
+        button.dataset.correct = "true";
+    }
+
     button.onclick = function () {
-    nextBtn.style.display = "block";
+        nextBtn.style.display = "block";
 
-    let buttons = document.getElementsByClassName("option-btn");
+        let buttons = document.getElementsByClassName("option-btn");
 
-    for (let c = 0; c< buttons.length; c++) {
-        buttons[c].disabled = true;}
+        for (let c = 0; c < buttons.length; c++) {
+            buttons[c].disabled = true;
+
+            if (buttons[c].dataset.correct === "true") {
+                buttons[c].classList.add("correct-answer");
+            }
+        }
+
+        this.classList.add("selected");
     };
         optionsList.appendChild(button);
-    }    
+    } 
     
 } 
 
 nextBtn.onclick=function(){
     ques++;
     showQuestion();    };
+
+    let score = 0;
+    let wronganswers = 0;
+
+    const resultsScreen = document.getElementById("results-section");
+    const scoreSummary = document.getElementById("score-summary");
