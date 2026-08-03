@@ -51,6 +51,11 @@ let category = "";
 let difficulty = "";
 let questions = [];
 let ques = 0;
+let score = 0;
+let wronganswers = 0;
+
+const resultsScreen = document.getElementById("results-section");
+const scoreSummary = document.getElementById("score-summary");
 
 for(let i=0;i<categories.length;i++){
 
@@ -89,6 +94,8 @@ async function getQuestions(){
         const data=await response.json();
         questions=data.results;
         ques=0;
+        score=0;
+        wronganswers=0;
         difficultyScreen.classList.add("hidden");
         quizScreen.classList.remove("hidden");
         showQuestion();}
@@ -144,18 +151,34 @@ for (let i = 0; i < answers.length; i++) {
         }
 
         this.classList.add("selected");
+
+        if (this.dataset.correct === "true") {
+            score++;
+        } else {
+            wronganswers++;
+        }
     };
         optionsList.appendChild(button);
     } 
     
 } 
 
-nextBtn.onclick=function(){
+nextBtn.onclick = function(){
     ques++;
-    showQuestion();    };
+    if (ques < questions.length) {
+        showQuestion();
+    } else {
+        showResults();
+    }
+};
 
-    let score = 0;
-    let wronganswers = 0;
-
-    const resultsScreen = document.getElementById("results-section");
-    const scoreSummary = document.getElementById("score-summary");
+function showResults(){
+    quizScreen.classList.add("hidden");
+    resultsScreen.classList.remove("hidden");
+    scoreSummary.innerHTML =
+    "You answered " + score + " correctly and " + wronganswers + " incorrectly out of " + questions.length + ".";
+}
+document.getElementById("restart").onclick = function(){
+    resultsScreen.classList.add("hidden");
+    categoryScreen.classList.remove("hidden");
+};

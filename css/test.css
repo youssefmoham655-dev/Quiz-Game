@@ -308,3 +308,7 @@ body{
     justify-content:center;
     margin:0;
 }
+.results{
+    color:var(--text-color-light);
+    font-family:cursive;
+}
