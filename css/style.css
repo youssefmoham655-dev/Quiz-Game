@@ -1,3 +1,29 @@
+body{
+    padding:10px;
+    font-size:16px;
+    background-color:var(--background-light);
+}
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+@media (min-width: 768px) {
+    body {
+    padding: 20px;
+    }
+    .container {
+    flex-direction: row;
+    }
+}
+
+@media (min-width: 1024px) {
+    body {
+    max-width: 1200px;
+    margin: 0 auto;
+    }
+}
+
 @keyframes fadeIn {
     0% {
         opacity: 0;
@@ -43,10 +69,6 @@
 .darkmode #theme-switch svg:last-child{
     display:block;
 }
-body{
-    margin:0;
-    background-color:var(--background-light);
-}
 html{
     margin:0;
     padding:0;
@@ -54,7 +76,8 @@ html{
 .navbar1{
     border-radius:100px;
     background-color:var(--container-and-navbar-color-light);
-    width:1000px;
+    width:100%;
+    max-width:1000px;
     animation: fadeIn 1s ease-in-out;
     box-shadow: 0px 7px 10px rgba(0, 0, 0, 0.3);
 }
@@ -67,13 +90,12 @@ html{
 .nav-links{
     list-style:none;
     display:flex;
-    gap:200px;
+    gap:20px;
     padding:15px;
     margin:0;
     justify-content:space-around;
     font-family:cursive;
     color:var(--text-color-light);
-    
 }
 .nav-links a{
     text-decoration:none;
@@ -100,7 +122,8 @@ html{
     align-items:center;
     justify-content:center;
     background-color:var(--container-and-navbar-color-light);
-    width:1200px;
+    width:100%;
+    max-width:1200px;
     height:200px;
     border-radius:10px;
     box-shadow: 0px 7px 10px rgba(0, 0, 0, 0.3);
@@ -146,7 +169,6 @@ html{
     border-top: 3px solid #949494;
     animation: fadeIn 1s ease-in-out;
 }
-/* CSS grid 1*/
 .how-it-works-section{
     width:100%;
     display:grid;

@@ -1,3 +1,29 @@
+body{
+    padding:10px;
+    font-size:16px;
+    background-color:var(--background-light);
+}
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+@media (min-width: 768px) {
+    body {
+    padding: 20px;
+    }
+    .container {
+    flex-direction: row;
+    }
+}
+
+@media (min-width: 1024px) {
+    body {
+    max-width: 1200px;
+    margin: 0 auto;
+    }
+}
+
 @keyframes fadeIn {
     0% {
         opacity: 0;
@@ -43,10 +69,6 @@
 .darkmode #theme-switch svg:last-child{
     display:block;
 }
-body{
-    margin:0;
-    background-color:var(--background-light);
-}
 html{
     margin:0;
     padding:0;
@@ -67,7 +89,7 @@ html{
 .nav-links{
     list-style:none;
     display:flex;
-    gap:200px;
+    gap:20px;
     padding:15px;
     margin:0;
     justify-content:space-around;
@@ -150,11 +172,14 @@ html{
     align-items:center;
     justify-content:center;
     background-color:var(--container-and-navbar-color-light);
-    width:1350px;
-    height:250px;
+    width:100%;
+    max-width:1200px;
+    height:200px;
     border-radius:10px;
     box-shadow: 0px 7px 10px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s ease, background-color 0.3s ease;
+    margin:50px;
+    padding:15px;
 }
 .hero-section-content:hover{
     transform: translateY(-3px);
@@ -172,4 +197,53 @@ html{
     background-color: #e74c3c;
     transform: scale(1.1); 
     cursor: pointer;
+}
+
+.line{
+    margin-top:35px;
+    width:80%;
+    border: none;
+    border-top: 3px solid #949494;
+    animation: fadeIn 1s ease-in-out;
+}
+.how-it-works-section{
+    width:100%;
+    display:grid;
+    justify-content:center;
+    align-items:center;
+    animation: fadeIn 1s ease-in-out;
+    font-family:cursive;
+    color:var(--text-color-light);
+}
+.how-it-works-section-head{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+.steps{
+    display:flex;
+    flex-direction:row;
+    justify-content:space-around;
+    align-items:center;
+    gap:20px;
+    color:var(--text-color-light);
+}
+.single-step{
+    background-color:var(--container-and-navbar-color-light);
+    width:200px;
+    height:180px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    border:2px solid #08c8f3;
+    border-radius:5px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    background-color:var(--container-and-navbar-color-light);
+    flex-direction:column;
+}
+.single-step:hover{
+    transform: translateY(-3px);
+}
+.arrow{
+    width:50px;
 }
