@@ -26,6 +26,7 @@ Use DEMO link:
 - CSS variables
 - Use of ARIA attributes
 - Async functions
+- Random info through [API Ninjas](https://api-ninjas.com/)
 
 ## Usage
 
