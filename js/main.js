@@ -45,3 +45,4 @@ async function getFact(){
 getFact();
 
 factButton.addEventListener("click", getFact);
+themeButton.setAttribute("aria-pressed", "true");
