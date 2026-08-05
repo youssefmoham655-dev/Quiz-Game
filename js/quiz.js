@@ -161,7 +161,7 @@ for (let i = 0; i < answers.length; i++) {
         optionsList.appendChild(button);
     } 
     
-} 
+}
 
 nextBtn.onclick = function(){
     ques++;
